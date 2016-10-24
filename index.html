@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>官网</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script>
+        var myapp=angular.module("myapp",["ngRoute"]);
+        myapp.config(function($routeProvider){
+            $routeProvider.when("/",{templateUrl:"views/index_view/index_view.html",controller:"index_view"});
+            $routeProvider.when("/news_centent",{templateUrl:"views/index/new_centent/news_centent.html"});
+            $routeProvider.when("/industry_news",{templateUrl:"views/index/industry.news.html"});
+            $routeProvider.when("/news_centent",{templateUrl:"views/index/new_centent/news_centent.html",controller:"new_centerCtrl"});
+            $routeProvider.when("/recruit",{templateUrl:"views/index/recruit.html"});
+            $routeProvider.when("/canvass",{templateUrl:"views/index/canvass.html"});
+            $routeProvider.when("/club",{templateUrl:"views/index/club/club.html",controller:"clubCtrl"});
+            $routeProvider.otherwise({templateUrl:"views/index/index_view/index_view.html"});
+        });
+    </script>
+    <script src="views/index/club/club.js"></script>
+    <script src="views/index/index_view/index_view.js"></script>
+    <script src="views/index/new_centent/news_center.js"></script>
+    <script src="js/customFilters.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="inner">
+        <div class="header_top_nav fl">
+            <a href="javascript:;" class="active">官网</a>
+            <a href="shop.html">商城</a>
+        </div>
+        <div class="language fr">
+            <a href="#"><span>中文简体 </span>/ English</a>
+        </div>
+    </div>
+</header>
+<div class="logo_bar">
+    <div class="inner clear">
+        <div class="logo_bar_logo fl">
+            <img src="images/index_logo.png">
+            <img src="images/index_logetext.png" class="logo_bar_logo_text">
+        </div>
+        <div class="logo_bar_search fr">
+            <input type="text" class="fl">
+            <button type="submit" class="fl"></button>
+        </div>
+    </div>
+</div>
+<nav class="mainnav">
+    <div class="inner">
+        <ul>
+            <li><a href="#/">首页</a></li>
+            <li><a href="#canvass">企业简介</a></li>
+            <li><a href="#/news_centent">最新新闻</a></li>
+            <li><a href="#club">宝妈俱乐部</a></li>
+            <li><a href="#recruit">加入我们</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- <ng-view></ng-view> -->
+<section ng-view></section>
+<footer class="footer">
+    <div class="inner">
+        <ul class="footer_nav clear">
+            <li><a href="javascript:;"> 首页</a></li>
+            <li><a href="javascript:;">企业简介</a> </li>
+            <li><a href="javascript:;">最新新闻</a> </li>
+            <li><a href="javascript:;">宝妈俱乐部</a> </li>
+            <li><a href="javascript:;">关于我们</a> </li>
+        </ul>
+        <p class="footer_phone">
+            全国服务热线：400-159-7868    版权所有 中国总经销：广州市宝贝乐婴童用品有限公司
+        </p>
+        <p>
+            地址：中国·广州·人和·方石工业区   粤ICP备14013987号
+        </p>
+    </div>
+</footer>
+</body>
+</html>

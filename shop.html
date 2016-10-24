@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html ng-app="cupShop">
+<head>
+    <meta charset="UTF-8">
+    <title>水杯商城</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="js/shop.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/shop.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+    <header class="header">
+        <div class="inner">
+            <div class="header_top_nav fl">
+                <a href="index.html">官网</a>
+                <a href="javascript:;"  class="active">商城</a>
+            </div>
+            <div class="language fr">
+                <a href="#"><span>中文简体 </span>/ English</a>
+            </div>
+        </div>
+    </header>
+    <div class="logo_bar">
+        <div class="inner clear">
+            <div class="logo_bar_logo fl">
+                <img src="images/index_logo.png">
+                <img src="images/index_logetext.png" class="logo_bar_logo_text">
+            </div>
+            <div class="logo_bar_search fr">
+                <input type="text" class="fl">
+                <button type="submit" class="fl"></button>
+            </div>
+        </div>
+    </div>
+    <div  class="banner">
+    </div>
+   <section>
+       <div class="inner clear">
+            <div class="leftside fl" ng-controller="myCtrl">
+                    <div class="top">
+                        <div class="title">
+                            <h2><a href="">更多惊喜</a></h2>
+                        </div>
+                        <div class="sidebar">
+                            <ul id="list">
+                                <li><a href="">餐具系列</a><span>22</span></li>
+                                <li><a href="">辅助系列</a><span>36</span></li>
+                                <li><a href="">浴盆系列</a><span>43</span></li>
+                                <li><a href="">辅助系列</a><span>26</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="title">
+                            <h2><a href="">妈咪用品</a></h2>
+                        </div>
+                        <div class="sidebar clear">
+                            <div class="box">
+                                <div class="left fl">
+                                    <img src="images/shop_xnq.png" alt="">
+                                </div>
+                                <div class="right fl">
+                                    <h5><a href="">硅胶吸奶器</a></h5>
+                                    <a href=""><img src="images/shop_形状-20-拷贝-.jpg" alt=""></a>
+                                    <span>$36.60</span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="advertise">
+                    <a href=""><img src="images/shop_ads_block.png" alt=""></a>
+                </div>
+                    </div>
+           <div class="rightside fr" >
+               <div id="index" class="one" ng-controller="oneCtrl">
+                   <div class="top clear" >
+                       <div class="display clear">
+                           <img src="images/shop_Exclusive-TOYS.png" alt="">
+                           <img src="images/shop_Free.png" alt="">
+                       </div>
+                       <div class="cup_title">
+                           <h2>水壶/奶瓶</h2>
+                       </div>
+                       <div class="products" id="products">
+                           <div id="move">
+                               <div id="box" class="box" ng-repeat="product in productList_1">
+                                   <div class="box_title">
+                                       <h3>{{product.ChineseName}}</h3>
+                                       <p>{{product.EnglishName}}</p>
+                                   </div>
+                                   <div class="pic">
+                                       <img ng-src="{{product.imgsrc}}" alt="">
+                                   </div>
+                                   <div class="bot">
+                                       <span class="price">{{product.price | currency:"$"}}</span>
+                                       <span class="car"><a href=""><img src="images/shop_car.png" alt=""></a></span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="btn">
+                               <a href="" ><img src="images/shop_larrow.jpg" alt="" ng-click="Move('left')"></a>
+                               <a href="" ><img src="images/shop_rarrow.jpg" alt="" ng-click="Move()"></a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="bottom">
+                       <div class="display clear">
+                           <img src="images/shop_Arrivals.png" alt="">
+                           <img src="images/shop_seasonSell.png" alt="">
+                       </div>
+                       <div class="cup_title">
+                           <h2>玩具系列</h2>
+                       </div>
+                       <div class="top clear">
+                           <div class="box" ng-repeat="product in productList_2">
+                               <div class="box_title">
+                                   <h3>{{product.ChineseName}}</h3>
+                                   <p>{{product.EnglishName}}</p>
+                               </div>
+                               <div class="pic">
+                                   <img ng-src="{{product.imgsrc}}" alt="">
+                               </div>
+                               <div class="bot">
+                                   <span class="price">{{product.price | currency:"$"}}</span>
+                                   <span class="car"><a href=""><img src="images/shop_car.png" alt=""></a></span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div id="content">
+               <div class="two" ng-controller="twoCtrl">
+                   <div class="top clear">
+                       <h2>餐具系列</h2>
+                       <div class="search"><span class="line1"><img src="images/shop_kuai.jpg" alt=""></span>
+                           <span class="line1"><img src="images/shop_menu.jpg" alt=""></span>
+                           <select class="fr" ng-model="x" ng-change="change(x)" >
+                               <option value="价格从低到高" selected="selected">价格从低到高</option>
+                               <option value="价格从高到低" >价格从高到低</option>
+                               <option value="人气">人气</option>
+                               <option value="新品">新品</option>
+                               <option value="销量">销量</option>
+                           </select>
+                           <span class="fr line2">排序</span>
+                       </div>
+                       <div class="products">
+                           <div class="box" ng-repeat="product in productList_3">
+                               <div class="box_title">
+                                   <h3>{{product .ChineseName}}</h3>
+                                   <p>{{product .EnglishName}}</p>
+                               </div>
+                               <div class="pic">
+                                   <img ng-src="{{product.imgsrc}}" alt="">
+                               </div>
+                               <div class="bot">
+                                   <span class="price">{{product.price | currency:"$"}}</span>
+                                   <span class="car"><a href=""><img src="images/shop_car.png" alt=""></a></span>
+                               </div>
+                           </div>
+
+                       </div>
+                   </div>
+               </div>
+                   <div class="two" ng-controller="twoCtrl">
+                       <div class="top clear">
+                           <h2>餐具系列</h2>
+                           <div class="search"><span class="line1"><img src="images/shop_kuai.jpg" alt=""></span>
+                               <span class="line1"><img src="images/shop_menu.jpg" alt=""></span>
+                               <select class="fr" ng-model="x" ng-change="change(x)" >
+                                   <option value="价格从低到高" selected="selected">价格从低到高</option>
+                                   <option value="价格从高到低" >价格从高到低</option>
+                                   <option value="人气">人气</option>
+                                   <option value="新品">新品</option>
+                                   <option value="销量">销量</option>
+                               </select>
+                               <span class="fr line2">排序</span>
+                           </div>
+                           <div class="products">
+                               <div class="box" ng-repeat="product in productList_3">
+                                   <div class="box_title">
+                                       <h3>{{product .ChineseName}}</h3>
+                                       <p>{{product .EnglishName}}</p>
+                                   </div>
+                                   <div class="pic">
+                                       <img ng-src="{{product.imgsrc}}" alt="">
+                                   </div>
+                                   <div class="bot">
+                                       <span class="price">{{product.price | currency:"$"}}</span>
+                                       <span class="car"><a href=""><img src="images/shop_car.png" alt=""></a></span>
+                                   </div>
+                               </div>
+
+                           </div>
+                       </div>
+                   </div>
+                   <div class="two" ng-controller="twoCtrl">
+                   <div class="top clear">
+                       <h2>餐具系列</h2>
+                       <div class="search"><span class="line1"><img src="images/shop_kuai.jpg" alt=""></span>
+                           <span class="line1"><img src="images/shop_menu.jpg" alt=""></span>
+                           <select class="fr" ng-model="x" ng-change="change(x)" >
+                               <option value="价格从低到高" selected="selected">价格从低到高</option>
+                               <option value="价格从高到低" >价格从高到低</option>
+                               <option value="人气">人气</option>
+                               <option value="新品">新品</option>
+                               <option value="销量">销量</option>
+                           </select>
+                           <span class="fr line2">排序</span>
+                       </div>
+                       <div class="products">
+                           <div class="box" ng-repeat="product in productList_3">
+                               <div class="box_title">
+                                   <h3>{{product .ChineseName}}</h3>
+                                   <p>{{product .EnglishName}}</p>
+                               </div>
+                               <div class="pic">
+                                   <img ng-src="{{product.imgsrc}}" alt="">
+                               </div>
+                               <div class="bot">
+                                   <span class="price">{{product.price | currency:"$"}}</span>
+                                   <span class="car"><a href=""><img src="images/shop_car.png" alt=""></a></span>
+                               </div>
+                           </div>
+
+                       </div>
+                   </div>
+               </div>
+
+                </div>
+           </div>
+       </div>
+   </section>
+    <footer class="footer">
+        <div class="inner">
+            <ul class="footer_nav clear">
+                <li><a href="javascript:;"> 首页</a></li>
+                <li><a href="javascript:;">企业简介</a> </li>
+                <li><a href="javascript:;">最新新闻</a> </li>
+                <li><a href="javascript:;">宝妈俱乐部</a> </li>
+                <li><a href="javascript:;">关于我们</a> </li>
+            </ul>
+            <p class="footer_phone">
+                全国服务热线：400-159-7868    版权所有 中国总经销：广州市宝贝乐婴童用品有限公司
+            </p>
+            <p>
+                地址：中国·广州·人和·方石工业区   粤ICP备14013987号
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

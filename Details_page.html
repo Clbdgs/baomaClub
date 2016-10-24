@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/Details_page.css/" rel="stylesheet" type="text/css">
+    <script src="lib/jquery-3.1.0.js"></script>
+    <script src="js/Details_page.js"></script>
+</head>
+<body>
+<div class="model clear" id="model">
+    <div class="close" id="close">
+        <img src="images/loginClose.png">
+    </div>
+    <div class="model_title clear">
+        <h3 class="fl">会员登录</h3>
+        <p class="fl">还没有账号？<a href="javascript:;" id="model_sign_btn">立即注册</a></p>
+    </div>
+    <form>
+        <p><input type="text" placeholder="用户名"></p>
+        <p><input type="password" placeholder="密码"></p>
+        <p class="submit_btn"><button type="submit">登录</button></p>
+    </form>
+</div>
+<div class="model model_sign clear" id="model_sign">
+    <div class="close" id="close_sign">
+        <img src="images/loginClose.png">
+    </div>
+    <div class="model_title clear">
+        <h3 class="fl">注册</h3>
+        <p class="fl">已有账号？<a href="javascript:;" id="atLanding">马上登录</a></p>
+    </div>
+    <form>
+        <p><input type="text" placeholder="用户名"></p>
+        <p><input type="password" placeholder="设置密码"></p>
+        <p><input type="password" placeholder="确认密码"></p>
+        <p><input type="email" placeholder="邮箱"></p>
+        <p class="submit_btn"><button type="submit">马上注册</button></p>
+    </form>
+</div>
+<header class="header">
+    <div class="inner">
+        <div class="header_top_nav fl">
+            <a href="index.html">官网</a>
+            <a href="javascript:;"  class="active">商城</a>
+        </div>
+        <div class="language fr">
+            <a href="#"><span>中文简体 </span>/ English</a>
+        </div>
+    </div>
+</header>
+<div class="logo_bar">
+    <div class="inner clear">
+        <div class="logo_bar_logo fl">
+            <img src="images/index_logo.png">
+            <img src="images/index_logetext.png" class="logo_bar_logo_text">
+        </div>
+        <div class="logo_bar_search fr">
+            <input type="text" class="fl">
+            <button type="submit" class="fl"></button>
+        </div>
+    </div>
+</div>
+<div  class="banner">
+    <img src="images/shop_banner.jpg">
+</div>
+    <div class="main">
+        <div class="inner">
+            <div class="main_bot clear">
+                <div class="mag clear">
+                    <div class="mag_top">
+                        <div class="mag_top_inner" id="min">
+                            <ul id="img_pic" class="picwidth_percentage">
+                                <li class="pic_none"><img src="images/details_products_01.png"></li>
+                                <li class="pic_none"><img src="image_dp/dp2.jpg"></li>
+                                <li class="pic_none"><img src="image_dp/dp3.jpg"></li>
+                                <li class="pic_none"><img src="image_dp/dp4.jpg"></li>
+                                <li class="pic_none"><img src="image_dp/dp5.jpg"></li>
+                            </ul>
+                            <span class="drag" id="s_box"></span>
+                            <!--<div class="wrap"><img src="image_dp/dp1_b.jpg" class="pics"> </div>-->
+                        </div>
+                    </div>
+                    <div class="mag_cen">
+                        <ul class="clear" id="img_bic">
+                            <li class="hover"><img src="images/details_products_01.png"></li>
+                            <li><img src="image_dp/dp2.jpg" alt=""></li>
+                            <li><img src="image_dp/dp3.jpg" alt=""></li>
+                            <li><img src="image_dp/dp4.jpg" alt=""></li>
+                            <li><img src="image_dp/dp5.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="mag_bot clear">
+                        <a href="javaScript:;"><i class="one"></i>分享</a>
+                        <a href="javaScript:;"><i class="two"></i>关注商品</a>
+                    </div>
+                </div>
+                <div class="content font-size">
+                    <ul id="max_tab">
+                        <li id="max" class="wrap">
+                            <img src="images/details_products_01.png" class="im_n im_b">
+                            <img src="image_dp/dp2_b.jpg" class="im_n">
+                            <img src="image_dp/dp3_b.jpg" class="im_n">
+                            <img src="image_dp/dp4_b.jpg" class="im_n">
+                            <img src="image_dp/dp5_b.jpg" class="im_n">
+                        </li>
+                    </ul>
+                    <div class="content_top">
+                        <h3>双柄多彩PPSU饮水杯 BB137</h3>
+                        <p>采用食品级环保材质，个性化伸缩扣背带设计，背带不伤肩更舒适。</p>
+                    </div>
+                    <div class="content_mid">
+                        <div class="name">
+                            <p>价　格：</p>
+                            <h2>¥108.00</h2>
+                            <div class="comment-count">
+                                <p>累计评价</p>
+                                <a href="JavaScript:;">26261</a>
+                            </div>
+                        </div>
+                        <div class="ps clear">
+                            <div class="ps_left">配 送 至：</div>
+                            <select>
+                                <option>北京朝阳区三环以内</option>
+                                <option>北京朝阳区四环以内</option>
+                                <option>北京朝阳区五环以内</option>
+                                <option>北京朝阳区六环以内</option>
+                            </select>
+                        </div>
+                        <div class="service_fw clear">
+                            <div class="dt">服　 务：</div>
+                            <div class="dd">心动不如行动,刚快下单喔，预计明天送达</div>
+                        </div>
+                    </div>
+                    <div class="content_bot">
+                        <div class="choose_color clear">
+                            <div class="dt">选择颜色：</div>
+                            <div class="dd" id="content_dd">
+                                <div class="item item_ac"><a href="javascript:;">枚红色</a></div>
+                                <div class="item"></i><a href="javascript:;">蓝色</a></div>
+                                <div class="item"></i><a href="javascript:;">绿色</a></div>
+                                <div class="item"><a href="javascript:;">橙色</a></div>
+                            </div>
+                        </div>
+                        <div class="choose_color clear" >
+                            <div class="dt">容　量：</div>
+                            <div class="dd"id="content_dd_b">
+                                <div class="item item_ac"><i class="icon icon_ac"></i><a href="javascript:;"><span> 380ml</span></a></div>
+                            </div>
+                        </div>
+                        <div class="shopping_btn clear">
+                            <div class="wrap-input" id="WrapInput">
+                                <input type="text" value="1" class="text">
+                                <a href="JavaScript:;" class="btn_a">+</a><a href="JavaScript:;" class="btn_r">-</a>
+                            </div>
+                            <div class="s_btn">
+                                <a href="JavaScript:;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comment_area">
+        <div class="inner">
+            <div class="comment_area_title block_title clear">
+                <div class="clear">
+                    <h2 class="fl">商品评论</h2>
+                    <div id="comment_btn" class="comment_btn fr"><a href="javascript:;">发表评论</a></div>
+                </div>
+                <div class="input_box" id="input_box">
+                    <textarea placeholder="请发表评论"></textarea>
+                    <div class="publish_btn">
+                        <button id="landing">登录</button>
+                        <button>发表</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_area_content">
+                <div class="comment_area_col clear">
+                    <div class="comment_area_col_img fl">
+                        <img src="images/comment_about01.png">
+                    </div>
+                    <div class="comment_area_col_text fl">
+                        <h4>我是测试号</h4>
+                        <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                    </div>
+                    <div class="like">
+                        <a href="javascript:;" id="inlike">赞[<span id="inlikeNam"></span>]</a>
+                        <a href="javascript:;">评论</a>
+                        <a href="javascript:;">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="inner">
+            <ul class="footer_nav clear">
+                <li><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">企业简介</a> </li>
+                <li><a href="javascript:;">最新新闻</a> </li>
+                <li><a href="javascript:;">宝妈俱乐部</a> </li>
+                <li><a href="javascript:;">关于我们</a> </li>
+            </ul>
+            <p class="footer_phone">
+                全国服务热线：400-159-7868    版权所有 中国总经销：广州市宝贝乐婴童用品有限公司
+            </p>
+            <p>
+                地址：中国·广州·人和·方石工业区   粤ICP备14013987号
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

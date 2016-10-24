@@ -1,0 +1,79 @@
+<div class="banner">
+    <img src="images/index_banner3.jpg">
+</div>
+<div class="con_news">
+    <div class="inner clear">
+        <div class="clear">
+            <ul class="new_nav">
+                <li>
+                    <a href="javascript:;" class="text_transform"><i></i><h3>公司新闻</h3><br/>BAODA PROFILE</a>
+                </li>
+                <li>
+                    <a href="#industry_news" class="text_transform"><h3>行业新闻</h3><br/>Industry news</a>
+                </li>
+            </ul>
+            <div class="news_title fr">
+                <h1>公司新闻</h1>
+                <p>BAODA PROFILE</p>
+            </div>
+        </div>
+        <div class="the_news news_centent">
+            <ul>
+                <li class="color-gray clear" ng-repeat="item in data | pagerFilter:pageNum:pageSize">
+                    <div class="pic">
+                        <img ng-src="{{item.imgpic}}">
+                    </div>
+                    <div class="text">
+                        <h3><span>{{item.title_left}}</span>{{item.title}}</h3>
+                        <p>{{item.text}}</p>
+                    </div>
+                </li>
+                <!--<li class="color-gray clear">
+                    <div class="text text_r fl">
+                        <h3><span>JUL</span>2016-7-30宝德销售精英打造超强凝聚力团队特训 </h3>
+                        <p>团队是现代企业内部运营的基本单位，高效的团队建设和管理，是保证整个集团高效运转的基础。
+                            因此 ，如何建立集团内部的高效团队，打造高绩效的部门，是我们宝德集团的一个关键目标。
+
+                            7月30日至31日，宝德集团国内市场部在广州拓展训练基地进行了为期两天的体验式培训——打造
+                            超强凝 聚力团队特训营。仅仅两天的训练，就使平时耳熟能详的“团队精神”变得内容丰富、有血
+                            有肉、寓意深刻，训 练带来的心灵冲击，引发了大家内心更多的思考。下面就让小编带领大家一起
+                            来回顾这次难忘的心灵之旅吧</p>
+                    </div>
+                    <div class="pic pic_r fl">
+                        <img src="images/news_centent_block_05.jpg">
+                    </div>
+                </li>
+                <li class="color-gray clear">
+                    <div class="pic fl">
+                        <img src="images/news_centent_block_05.jpg">
+                    </div>
+                    <div class="text fl">
+                        <h3><span>N</span>2016-8-5  宝德连续四年荣获“中国优秀企业公民奖”</h3>
+                        <p>全球知名多元化医疗保健公司宝德在近期举行的“2014第十届中国优秀企业公民年会暨颁奖盛典”
+                            上荣获 “中国优秀企业公民奖”，这是雅培连续第4年获得该奖项。</p>
+                    </div>
+                </li>
+                <li class="color-gray clear">
+                    <div class="text text_r fl">
+                        <h3><span>JUL</span>2016-7-30宝德销售精英打造超强凝聚力团队特训 </h3>
+                        <p>团队是现代企业内部运营的基本单位，高效的团队建设和管理，是保证整个集团高效运转的基础。
+                            因此 ，如何建立集团内部的高效团队，打造高绩效的部门，是我们宝德集团的一个关键目标。
+
+                            7月30日至31日，宝德集团国内市场部在广州拓展训练基地进行了为期两天的体验式培训——打造
+                            超强凝 聚力团队特训营。仅仅两天的训练，就使平时耳熟能详的“团队精神”变得内容丰富、有血
+                            有肉、寓意深刻，训 练带来的心灵冲击，引发了大家内心更多的思考。下面就让小编带领大家一起
+                            来回顾这次难忘的心灵之旅吧</p>
+                    </div>
+                    <div class="pic pic_r fl">
+                        <img src="images/news_centent_block_05.jpg">
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <div class="news_center_btns">
+            <button type="button" class="news_center_button" ng-click="prev()">上一页</button>
+            <button type="button" class="news_center_button number" ng-class="getActionClass(number)" ng-repeat="number in data | pageCountFilter:pageSize">{{number}}</button>
+            <button type="button" class="news_center_button" ng-click="next()">下一页</button>
+        </div>
+    </div>
+</div>
